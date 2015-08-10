@@ -1,0 +1,22 @@
+<ion-view view-title="Dashboard">
+  <ion-header-bar class="item-input-inset " >
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="Rechercher Un Produit" ng-model="searchText" ng-click="scrollTop()">
+    </label>
+    <button class="button button-clear" ng-click="searchText = undefined">
+      Annuler
+    </button>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <div ng-repeat="produit in produits | filter:searchText | orderBy: 'marque.non_marque'">
+        <ion-item class="item-icon-left dark" ng-switch on="{{produit.est_autorise}}">
+          <i class="icon ion-ios-checkmark calm" ng-switch-when="true"></i>
+          <i class="icon ion-ios-close energized" ng-switch-when="false"></i>
+          <b>{{produit.marque.nom_marque}} </b>{{produit.nom}}
+          </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
