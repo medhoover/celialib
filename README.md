@@ -9,7 +9,7 @@ Please refer to this [topic](http://ionicframework.com/docs/guide/installation.h
 ### Installation
 
 - Clone the repository in any place you would like 
-- The repository contains all dependencies, but you still able to update or install for newer version (Not recommanded) via: _bower install_ or _bower update_
+- The repository contains all dependencies, but you still able to update or install newer versions of dependencies (Not recommanded) via: _bower install_ or _bower update_
 - You can also configure the callback's url in: _www/js/services.js_ to math the local celialib server url.
 
 ### Usage
